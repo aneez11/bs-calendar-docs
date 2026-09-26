@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 /* The BSCalendar/BSDatePicker tailwind themes ship their class names inside
-   the nepali-bs-calendar dist bundle — teach Tailwind to scan it too. (Direct
-   relative path: node_modules is a symlink the dev scanner may not follow.) */
-@source "../../bs-calendar/dist";
+   the nepali-bs-calendar dist bundle — teach Tailwind to scan it too. Points at
+   the installed package (not a sibling checkout) so hosted builds work. */
+@source "../node_modules/nepali-bs-calendar/dist";
 
 @custom-variant dark (&:is(.dark *));
 
